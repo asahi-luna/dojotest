@@ -17,7 +17,23 @@
             'dojo/dom-construct'
         ], function (dom, domConstruct) {
             var greetingNode = dom.byId('greeting');
-            domConstruct.place('<em> Dojo!</em>', greetingNode);
+            domConstruct.place('<em> Do-jo!</em>', greetingNode);
+        });
+        require([
+            'dojo/dom',
+            'dojo/fx',
+            'dojo/domReady!'
+        ], function (dom, fx) {
+            // The piece we had before...
+            var greeting = dom.byId('greeting');
+            greeting.innerHTML += ' from Dojo!';
+
+            // ...but now, with an animation!
+            fx.slideTo({
+                node: greeting,
+                top: 100,
+                left: 200
+            }).play();
         });
     </script>
 </body>
