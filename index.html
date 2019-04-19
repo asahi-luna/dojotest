@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dojotest</title>
+    <script src="./dojo3.8/init.js"></script>
+    <script src="./dojo3.8/esri.symbol.MultiLineTextSymbol.js"></script>
+</head>
+<body>
+    <h1 id="greeting">Hello</h1>
+    <!-- load Dojo -->
+    <script>
+        require([
+            'dojo/dom',
+            'dojo/dom-construct'
+        ], function (dom, domConstruct) {
+            var greetingNode = dom.byId('greeting');
+            domConstruct.place('<em> Dojo!</em>', greetingNode);
+        });
+    </script>
+</body>
+</html>
