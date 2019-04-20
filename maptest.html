@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/3.8/js/esri/css/esri.css">
+    <script src="./js/3.8/init.js"></script>
+    <!-- <script src="./js/3.8/init.js"></script> -->
+    <style>
+        html, body, #viewDiv {
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+        }
+    </style>
+</head>
+<body class="claro">
+    <div id="viewDiv"></div>
+    <script>
+        var map;
+        require(["esri/map"], function(Map) {
+            map = new Map("viewDiv", {
+                basemap: "topo",
+                center: [-122.45, 37.75],
+                zoom: 13
+            });
+        });
+        // require([
+        //   "esri/map",
+        //   "esri/views/MapView"
+        // ], function(Map, MapView) {
+    
+        //   var map = new Map({
+        //     basemap: "topo-vector"
+        //   });
+    
+        //   var view = new MapView({
+        //     container: "viewDiv",
+        //     map: map,
+        //     center: [-118.71511,34.09042],
+        //     zoom: 11
+        //   });
+    
+        // });
+      </script>
+    </head>
+</body>
+</html>

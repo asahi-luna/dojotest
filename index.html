@@ -5,24 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>dojotest</title>
-    <script src="./dojo3.8/init.js"></script>
-    <script src="./dojo3.8/esri.symbol.MultiLineTextSymbol.js"></script>
+    <!-- load Dojo -->
+    <script src="./js/3.8/init.js"></script>
+    <!-- <script src="./js/3.8/esri.symbol.MultiLineTextSymbol.js"></script> -->
+    <script>
+        var dojoConfig = {
+            // baseUrl: "/js/dojo/dojo",
+            // has: {
+            //     "dojo-firebug": true,
+            //     "dojo-debug-messages": true
+            // },
+            // Don't attempt to parse the page for widgets
+            // parseOnLoad: false,
+            // packages: [
+            //     // Any references to a "demo" resource should load modules locally, *not* from CDN
+            //     {
+            //         name: "demo",
+            //         location: "/documentation/tutorials/1.10/dojo_config/demo"
+            //     }
+            // ],
+            // Timeout after 10 seconds
+            // waitSeconds: 10,
+            map: {
+                // Instead of having to type "dojo/domReady!", we just want "ready!" instead
+                "*": {
+                    ready: "dojo/domReady"
+                }
+            },
+            // Get "fresh" resources
+            // cacheBust: true  //是否缓存
+        };
+    </script>
 </head>
 <body>
     <h1 id="greeting">Hello</h1>
-    <!-- load Dojo -->
     <script>
-        require([
-            'dojo/dom',
-            'dojo/dom-construct'
-        ], function (dom, domConstruct) {
-            var greetingNode = dom.byId('greeting');
-            domConstruct.place('<em> Do-jo!</em>', greetingNode);
-        });
+        // require([
+        //     'dojo/dom',
+        //     'dojo/dom-construct'
+        // ], function (dom, domConstruct) {
+        //     var greetingNode = dom.byId('greeting');
+        //     domConstruct.place('<em> Do-jo!</em>', greetingNode);
+        // });
         require([
             'dojo/dom',
             'dojo/fx',
-            'dojo/domReady!'
+            'dojo/domReady!'  //<--只要require了这个模块就能让该回调函数在dom生成完毕之后再调用
         ], function (dom, fx) {
             // The piece we had before...
             var greeting = dom.byId('greeting');

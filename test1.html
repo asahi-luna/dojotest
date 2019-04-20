@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- load Dojo -->
+    <script src="./js/3.8/init.js"></script>
+    <script src="./js/3.8/esri.symbol.MultiLineTextSymbol.js"></script>
+</head>
+<body>
+    <button id="fadeOutButton">Fade block out</button>
+    <button id="fadeInButton">Fade block in</button>
+
+    <div id="fadeTarget" style="background-color: red;width: 100px;height: 200px;">
+        A red block
+    </div>
+    <script>
+        require(["dojo/_base/fx", "dojo/on", "dojo/dom", "dojo/domReady!"], function(fx, on, dom) {
+            var fadeOutButton = dom.byId("fadeOutButton"),
+                fadeInButton = dom.byId("fadeInButton"),
+                fadeTarget = dom.byId("fadeTarget");
+
+            on(fadeOutButton, "click", function(evt){
+                fx.fadeOut({ node: fadeTarget }).play();
+            });
+            on(fadeInButton, "click", function(evt){
+                fx.fadeIn({ node: fadeTarget }).play();
+            });
+        });
+    </script>
+    <button id="wipeOutButton">Wipe block out</button>
+    <button id="wipeInButton">Wipe block in</button>
+    
+    <div id="wipeTarget" style="background-color: red;width: 100px;height: 200px;">
+        A red block
+    </div>
+    <script>
+        require(["dojo/fx", "dojo/on", "dojo/dom", "dojo/domReady!"], function(fx, on, dom) {
+            var wipeOutButton = dom.byId("wipeOutButton"),
+                wipeInButton = dom.byId("wipeInButton"),
+                wipeTarget = dom.byId("wipeTarget");
+    
+            on(wipeOutButton, "click", function(evt){
+                fx.wipeOut({ node: wipeTarget }).play();
+            });
+            on(wipeInButton, "click", function(evt){
+                fx.wipeIn({ node: wipeTarget }).play();
+            });
+        });
+    </script>
+</body>
+</html>
