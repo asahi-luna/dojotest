@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./js/3.8/js/esri/css/esri.css">
+    <!-- <link rel="stylesheet" href="./js/3.8/js/dojo/dijit/themes/claro/claro.css"> -->
     <script src="./js/3.8/init.js"></script>
+    <!-- <script src=".\js\3.8\js\esri\nls\zh-cn\jsapi.js"></script> -->
+    <!-- <script src="./js/3.8/esri.symbol.MultiLineTextSymbol.js"></script> -->
     <!-- <script src="./js/3.8/init.js"></script> -->
     <style>
         html, body, #viewDiv {
@@ -23,8 +26,8 @@
         var map;
         require(["esri/map"], function(Map) {
             map = new Map("viewDiv", {
-                basemap: "topo",
-                center: [-122.45, 37.75],
+                basemap: "osm",
+                center: [120.61, 30.30],
                 zoom: 13
             });
         });
