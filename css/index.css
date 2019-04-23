@@ -1,0 +1,19 @@
+html, body, #viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+#showPointPanel{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 40px;
+    width: 500px;
+    line-height: 20px;
+    text-indent: 1em;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}

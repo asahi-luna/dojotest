@@ -1,10 +1,6 @@
 # dojotest #
-it is <span style="color: red;">dojo</span> test
+it is dojo test
 * hello 
-* ^ arcgis
-& arcgis
-! arcgis
+* arcgis
 # arcgis
-$ arcgis
-% arcgis%
-# hello *arcgis
+# hello arcgis
